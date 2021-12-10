@@ -1,3 +1,5 @@
+print("IS MAIN0")
+
 import datetime
 import logging
 import os
@@ -194,8 +196,10 @@ def start_bot():
 
     updater.idle()
 
+print("IS MAIN")
 
 if __name__ == '__main__':
+    print("IS MAIN2")
     start_bot()
 
 
