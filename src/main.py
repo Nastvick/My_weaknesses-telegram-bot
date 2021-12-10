@@ -1,12 +1,13 @@
 import datetime
 import logging
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 from enum import auto, IntEnum
 
 from db import Session
 from create_db import create_db
-from dotenv import load_dotenv
 
 from telegram import (
     Update,
@@ -29,7 +30,6 @@ from telegram.ext import (
 
 from models import User
 
-load_dotenv()
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -189,7 +189,7 @@ def start_bot():
         listen="0.0.0.0",
         port=PORT,
         url_path=TOKEN,
-        webhook_url=f'https://task-telegram.herokuapp.com/{TOKEN}',
+        webhook_url=f'https://my-weaknesses.herokuapp.com/{TOKEN}',
     )
 
     updater.idle()
